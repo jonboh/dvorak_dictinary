@@ -2,7 +2,7 @@
 import sys
 
 words = list()
-with open('corpus', "r") as f:
+with open('corpus.txt', "r") as f:
     words = list(f)
     words = list(map(lambda e: e.split('\t')[1].strip(), words))
 
