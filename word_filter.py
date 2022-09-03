@@ -32,6 +32,12 @@ def isvalid(allowed_letters, word):
 
 count = int(sys.argv[1])
 level = int(sys.argv[2])
+delimiter = sys.argv[3]
+if delimiter == 'space':
+    delimiter = ' '
+else:
+    delimiter = '\n'
+
 allowed_letters = dvorak(level)
 filtered_words = list()
 for word in words:
@@ -41,4 +47,4 @@ for word in words:
         break
 
 for word in filtered_words:
-    print(word)
+    print(word, end=delimiter)
